@@ -73,27 +73,28 @@ const checkAnswer = () => {
   //   - Display an error message in the statusBox
 
   if (currentAnswer === "Lake Superior" || currentAnswer === "Superior") {
-    outputBox.innerHTML += `<h3>Lake Superior</h3>`
-    score += 0;
+    outputBox.innerHTML += `<h3>Lake Superior</h3><P>The world's largest freshwater lake by surface area.</p>`;
+    score += 1;
   } else if (currentAnswer === "Lake Michigan" || currentAnswer === "Michigan") {
-    outputBox.innerHTML += `<h3>Lake Michigan</h3>`
-    score += 0;
+    outputBox.innerHTML += `<h3>Lake Michigan</h3><p>The only lake that holds countless shipwrecks, earning the nickname 
+    "Graveyard of the Great Lakes."</p>`;
+    score += 1;
   } else if (currentAnswer === "Lake Huron" || currentAnswer === "Huron") {
-    outputBox.innerHTML += `<h3>Lake Huron</h3>`
-    score += 0;
+    outputBox.innerHTML += `<h3>Lake Huron</h3><p>Boosts over 30,000 islands, including Manitoulin Island.</p>`;
+    score += 1;
   } else if (currentAnswer === "Lake Erie" || currentAnswer === "Erie") {
-    outputBox.innerHTML += `<h3>Lake Erie</h3>`
-    score += 0;
+    outputBox.innerHTML += `<h3>Lake Erie</h3><p>Surprisingly warm, productive, and historically body of water.</p>`;
+    score += 1;
   } else if (currentAnswer === "Lake Ontario" || currentAnswer === "Ontario") {
-    outputBox.innerHTML += `<h3>Lake Ontario</h3>`
-    score += 0;
+    outputBox.innerHTML += `<h3>Lake Ontario</h3><p>Despite the smallest by surface, it is over 800 feet deep.</p>`;
+    score += 1;
   } else if (currentAnswer === "Lake Champlain" || currentAnswer === "Champlain") {
     // Secret bonus answer!
-    outputBox.innerHTML += `<h3>Lake Champlain</h3>`
+    outputBox.innerHTML += `<h3>Lake Champlain</h3><p>Famous for the legendary "Champ" monster, the oldest known fossil reef.</p>`;
     Champlain += false;
   } else {
     // If no conditions match, show an error message
-    statusBox.innerHTML = `sorry, but ${currentAnswer} is not one of the great lakes`
+    statusBox.innerHTML = `sorry, but ${currentAnswer} is not one of the great lakes`;
   }
 
   // After checking the answer, verify if the game is complete
@@ -117,7 +118,7 @@ const checkAnswer = () => {
 
 const checkScore = () => {
   if (score === 5) {
-    statusBox.innerHTML = "Congratulations! You found all five Great Lakes!";
+    statusBox.innerHTML = "Congratulations! You found all Five Great Lakes!";
   }
   if (score === 5 && champlain) {
     statusBox.innerHTML = "Five Great Lakes in America";
